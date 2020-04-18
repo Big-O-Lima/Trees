@@ -16,7 +16,7 @@ A Tree is defined as a collection of *nodes* connected by *directed or undirecte
 
 ### Terminology
 
-<img src="source/tree-terminology.png" alt="image " style="width:400px;" />
+<img src="Source/tree-terminology.png" alt="image " style="width:400px;" />
 
 ### Common uses 
 
@@ -34,11 +34,11 @@ A tree where each node has no more than two children (left child, right child). 
 
 binary tree representation:
 
-<img src="source/binary-tree.png" alt="image " style="width:400px;" />
+<img src="Source/binary-tree.png" alt="image " style="width:400px;" />
 
 complete binary tree representation:
 
-<img src="source/complete-binary-tree.png" alt="image " style="width:200px;" />
+<img src="Source/complete-binary-tree.png" alt="image " style="width:200px;" />
 
 #### Binary search treee (BST)
 
@@ -49,7 +49,7 @@ Is a binary tree that when visited in the following order: left child, root, rig
 
 Sample:
 
-<img src="source/binary-search-tree.png" alt="image " style="width:400px;" />
+<img src="Source/binary-search-tree.png" alt="image " style="width:400px;" />
 
 Sequence: {4, 10, 13, 16, 17, 19, 20, 22, 26, 29}
 
@@ -59,7 +59,7 @@ Sequence: {4, 10, 13, 16, 17, 19, 20, 22, 26, 29}
 
 A binary search tree such that for each node the heights of the left and right subtrees of the node differ by at most 1.
 
-<img src="source/avl-tree.png" alt="image " style="width:300px;" />
+<img src="Source/avl-tree.png" alt="image " style="width:300px;" />
 
 ### Red - Black Trees
 
@@ -71,7 +71,7 @@ Every node is colored either red or black so that:
 - If a node is red, then both its children are black.
 - Every path from a node to a left contains the same number of black nodes.
 
-<img src="source/red-black-tree.png" alt="image " style="width:400px;" />
+<img src="Source/red-black-tree.png" alt="image " style="width:400px;" />
 
 
 

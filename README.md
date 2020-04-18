@@ -1,4 +1,4 @@
-# Trees
+# Tree
 
 In contrast to Arrays or Linked lists, that are linear structures where the time required to search is proportional to the size of the data. Trees represent a better alternative to store and search data. 
 
@@ -16,13 +16,15 @@ A Tree is defined as a collection of *nodes* connected by *directed or undirecte
 
 ### Terminology
 
-<img src="Source/tree-terminology.png" alt="image" width="400" />
+<img src="Source/tree-terminology.png" alt="image" width="250" />
 
 ### Common uses 
 
 - Arithmetic expressions to be parsed
 - Priority queue ADT
 - File system in a computer
+- Syntax tree (used by compilers)
+- Spanning trees, shortes path trees used in routers and bridges in computer networks
 
 ### Types
 
@@ -35,6 +37,10 @@ A tree where each node has no more than two children (left child, right child). 
 binary tree representation:
 
 <img src="Source/binary-tree.png" alt="image " width="400" />
+
+full binary tree representation:
+
+<img src="Source/full-binary-tree.png" alt="image " width="100" />
 
 complete binary tree representation:
 
@@ -54,6 +60,26 @@ Sample:
 Sequence: {4, 10, 13, 16, 17, 19, 20, 22, 26, 29}
 
 
+
+### Heap
+
+A tree data structure using arrays used to implement priority queues. [Won't be covered]
+
+### B-Tree / B+Tree
+
+Used to implement indexing in databases [Won't be covered]
+
+### K-D Tree
+
+A space partitioning tree used to organize points in K dimensional space.
+
+### Trie
+
+Used to implement dictionaries with prefix lookup.
+
+### Suffix Tree
+
+Quick pattern search in fixed texts
 
 ### AVL Tree
 
@@ -75,6 +101,29 @@ Every node is colored either red or black so that:
 
 
 
+### Big-O notation
+
+In *Average* all operations in Trees are : O(log(n))
+
+*Worst* Time Complexity:
+
+| Type                     | Access    | Search    | Insertion | Deletion  |
+| ------------------------ | --------- | --------- | --------- | --------- |
+| Binary Search Tree (BST) | O(n)      | O(n)      | O(n)      | O(n)      |
+| Cartesian Tree           | -         | O(n)      | O(n)      | O(n)      |
+| B-Tree                   | O(log(n)) | O(log(n)) | O(log(n)) | O(log(n)) |
+| Red Black Tree           | O(log(n)) | O(log(n)) | O(log(n)) | O(log(n)) |
+| Splay Tree               | -         | O(log(n)) | O(log(n)) | O(log(n)) |
+| AVL Tree                 | O(log(n)) | O(log(n)) | O(log(n)) | O(log(n)) |
+| KD Tree                  | O(n)      | O(n)      | O(n)      | O(n)      |
+
+
+## Operations
+
+
+
+
+
 
 
 #### References
@@ -82,4 +131,5 @@ Every node is colored either red or black so that:
 - [CMU - Data Structures](https://www.cs.cmu.edu/~clo/www/CMU/DataStructures/)
 - [CMU - Tree Data Structure](https://www.cs.cmu.edu/~clo/www/CMU/DataStructures/Lessons/lesson4_1.htm)
 - [TAMU - Tree Data Structure](http://faculty.cs.tamu.edu/welch/teaching/211.s03/lnotes3.pdf)
+- [Big-O Notation](https://www.bigocheatsheet.com/)
 

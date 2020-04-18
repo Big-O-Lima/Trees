@@ -16,7 +16,7 @@ A Tree is defined as a collection of *nodes* connected by *directed or undirecte
 
 ### Terminology
 
-<img src="Source/tree-terminology.png" alt="image " style="width:400px;" />
+<img src="Source/tree-terminology.png" alt="image" width="400" />
 
 ### Common uses 
 

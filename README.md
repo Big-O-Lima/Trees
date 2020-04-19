@@ -28,6 +28,8 @@ A Tree is defined as a collection of *nodes* connected by *directed or undirecte
 
 ### Types
 
+
+
 #### Binary Tree
 
 A tree where each node has no more than two children (left child, right child). A binary tree with each node with exactly zero or two children is called a **full binary tree**. Also, a **complete binary tree** is a tree which is completely filled with the possible exception of the bottom level. A complete binary tree of the height h has between 2^h and 2^(h+1)-1 nodes.
@@ -59,35 +61,33 @@ Sample:
 
 Sequence: {4, 10, 13, 16, 17, 19, 20, 22, 26, 29}
 
-
-
-### Heap
+#### Heap
 
 A tree data structure using arrays used to implement priority queues. [Won't be covered]
 
-### B-Tree / B+Tree
+#### B-Tree / B+Tree
 
 Used to implement indexing in databases [Won't be covered]
 
-### K-D Tree
+#### K-D Tree
 
-A space partitioning tree used to organize points in K dimensional space.
+A space partitioning tree used to organize points in K dimensional space. [Won't be covered]
 
-### Trie
+#### Trie
 
-Used to implement dictionaries with prefix lookup.
+Used to implement dictionaries with prefix lookup. [Won't be covered]
 
-### Suffix Tree
+#### Suffix Tree
 
-Quick pattern search in fixed texts
+Quick pattern search in fixed texts. [Won't be covered]
 
-### AVL Tree
+#### AVL Tree [Balanced Tree]
 
 A binary search tree such that for each node the heights of the left and right subtrees of the node differ by at most 1.
 
 <img src="Source/avl-tree.png" alt="image " width="300" />
 
-### Red - Black Trees
+#### Red - Black Trees
 
 A binary search tree where every "real" node has 0, 1 or 2 fake children to ensure that it always has two children.
 
@@ -120,6 +120,68 @@ In *Average* all operations in Trees are : O(log(n))
 
 ## Operations
 
+### Tree traversals 
+
+Summary:
+
+<img src="Source/tree-traverse-comparison.jpg" alt="image " width="600" />
+
+Considering the following:
+
+<img src="Source/tree-sample.jpg" alt="image " width="230" />
+
+
+
+#### Depth First 
+
+#### Inorder
+
+```
+def inorder(tree) 
+	inorder(tree > left)
+	visit root
+	inorder(tree > right)
+end
+```
+
+(left, root, right) : { 4, 2, 5, 1, 3 }
+
+In BST returns non-decreasing order.
+
+#### Preorder
+
+```
+def preorder(tree) 
+	visit root
+	preorder(tree > left)
+	preorder(tree > right)
+end
+```
+
+(root, left, right) : { 1, 2, 4, 5, 3 }
+
+Used to create copies of the tree. Also to get prefix expression on of an expression tree. [Why are prefix expressions useful?](http://en.wikipedia.org/wiki/Polish_notation)
+
+#### Postorder
+
+```
+def postorder(tree) 
+	preorder(tree > left)
+	preorder(tree > right)
+	visit root
+end
+```
+
+(left, right, root) : { 4, 5, 2, 3, 1 }
+
+Used to delete the tree. Also to get postfix expression of an expression tree. [More about postfix expression](http://en.wikipedia.org/wiki/Reverse_Polish_notation)
+
+
+
+#### Breadth First  or Level Order
+
+{ 1, 2, 3, 4, 5 }
+
 
 
 
@@ -132,4 +194,5 @@ In *Average* all operations in Trees are : O(log(n))
 - [CMU - Tree Data Structure](https://www.cs.cmu.edu/~clo/www/CMU/DataStructures/Lessons/lesson4_1.htm)
 - [TAMU - Tree Data Structure](http://faculty.cs.tamu.edu/welch/teaching/211.s03/lnotes3.pdf)
 - [Big-O Notation](https://www.bigocheatsheet.com/)
+- [Geeks for geeks - Tree traversals](https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/?ref=rp)
 

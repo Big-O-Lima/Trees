@@ -138,9 +138,9 @@ Considering the following:
 
 ```
 def inorder(tree) 
-	inorder(tree > left)
+	inorder(tree -> left)
 	visit root
-	inorder(tree > right)
+	inorder(tree -> right)
 end
 ```
 
@@ -153,8 +153,8 @@ In BST returns non-decreasing order.
 ```
 def preorder(tree) 
 	visit root
-	preorder(tree > left)
-	preorder(tree > right)
+	preorder(tree -> left)
+	preorder(tree -> right)
 end
 ```
 
@@ -166,8 +166,8 @@ Used to create copies of the tree. Also to get prefix expression on of an expres
 
 ```
 def postorder(tree) 
-	preorder(tree > left)
-	preorder(tree > right)
+	preorder(tree -> left)
+	preorder(tree -> right)
 	visit root
 end
 ```
@@ -180,11 +180,40 @@ Used to delete the tree. Also to get postfix expression of an expression tree. [
 
 #### Breadth First  or Level Order
 
+Method A - Use function to print a given level
+
+```
+def printLevel(tree, level)
+	if tree is NULL then return
+	if level is 1 then 
+		print tree -> data
+	else if level greater than 1, then
+		printLevel(tree -> left, level-1)
+		printLevel(tree -> right, level-1)		
+end
+
+def print(tree)
+	for d = 1 to height(tree)
+		printLevel(tree, d)
+end
+```
+
+Method B - Using queue
+
+```
+def print(tree)
+	create empty Queue q
+	temp_node = root
+	while temp_node NOT null
+		print temp_node -> data
+		q.enqueue(temp_node -> left)
+		q.enqueue(temp_node -> right)		
+		temp_node =	q.dequeue()
+	end
+end
+```
+
 { 1, 2, 3, 4, 5 }
-
-
-
-
 
 
 
